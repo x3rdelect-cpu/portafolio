@@ -1,0 +1,79 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  background-color: #0b0f19; /* Fondo oscuro elegante */
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.text-cyan {
+  color: #00d8ff; /* Color de acento (Cyan) */
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navbar-links a {
+  color: #a0aab2;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ffffff;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: flex; /* Mostramos el botón hamburguesa */
+  }
+
+  .navbar-links {
+    display: none; /* Ocultamos los enlaces horizontales */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #0b0f19;
+    padding: 2rem 0;
+    text-align: center;
+    gap: 2rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+}
