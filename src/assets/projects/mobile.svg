@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050B12"/>
+      <stop offset="0.55" stop-color="#0A0A1A"/>
+      <stop offset="1" stop-color="#05060B"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="430" y1="150" x2="780" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE" stop-opacity="0.22"/>
+      <stop offset="0.5" stop-color="#6366F1" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#A855F7" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="480" y1="240" x2="740" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="0.5" stop-color="#818CF8"/>
+      <stop offset="1" stop-color="#E879F9"/>
+    </linearGradient>
+    <radialGradient id="glowCyan" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(430 230) rotate(90) scale(280)">
+      <stop stop-color="#22D3EE" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowViolet" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(880 590) rotate(90) scale(300)">
+      <stop stop-color="#A855F7" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#A855F7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" stroke="#94A3B8" stroke-opacity="0.07"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#grid)"/>
+  <circle cx="430" cy="230" r="260" fill="url(#glowCyan)" filter="url(#soft)"/>
+  <circle cx="880" cy="590" r="280" fill="url(#glowViolet)" filter="url(#soft)"/>
+
+  <!-- Teléfono trasero -->
+  <g transform="rotate(-8 850 440)">
+    <rect x="706" y="190" width="286" height="580" rx="46" fill="#0B0D18" stroke="#A5B4FC" stroke-opacity="0.22"/>
+    <rect x="720" y="204" width="258" height="552" rx="36" fill="#0E1022"/>
+    <rect x="760" y="222" width="178" height="262" rx="24" fill="url(#glass)" stroke="#A5B4FC" stroke-opacity="0.18"/>
+    <rect x="788" y="248" width="86" height="8" rx="4" fill="#E2E8F0" fill-opacity="0.45"/>
+    <rect x="788" y="268" width="128" height="5" rx="2.5" fill="#E2E8F0" fill-opacity="0.16"/>
+    <rect x="788" y="284" width="96" height="5" rx="2.5" fill="#E2E8F0" fill-opacity="0.12"/>
+    <circle cx="849" cy="404" r="52" fill="none" stroke="url(#accent)" stroke-width="2" stroke-opacity="0.7"/>
+    <path d="M823 404L841 422L877 386" stroke="#22D3EE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="728" y="516" width="106" height="64" rx="16" fill="#0A0C16" stroke="#A5B4FC" stroke-opacity="0.16"/>
+    <rect x="728" y="596" width="106" height="64" rx="16" fill="#0A0C16" stroke="#A5B4FC" stroke-opacity="0.16"/>
+    <rect x="874" y="516" width="106" height="64" rx="16" fill="#0A0C16" stroke="#A5B4FC" stroke-opacity="0.16"/>
+    <rect x="874" y="596" width="106" height="64" rx="16" fill="#0A0C16" stroke="#A5B4FC" stroke-opacity="0.16"/>
+    <rect x="748" y="536" width="46" height="6" rx="3" fill="#A5B4FC" fill-opacity="0.6"/>
+    <rect x="748" y="550" width="66" height="5" rx="2.5" fill="#E2E8F0" fill-opacity="0.14"/>
+    <rect x="748" y="616" width="46" height="6" rx="3" fill="#22D3EE" fill-opacity="0.6"/>
+    <rect x="748" y="630" width="66" height="5" rx="2.5" fill="#E2E8F0" fill-opacity="0.14"/>
+    <rect x="894" y="536" width="46" height="6" rx="3" fill="#818CF8" fill-opacity="0.6"/>
+    <rect x="894" y="550" width="66" height="5" rx="2.5" fill="#E2E8F0" fill-opacity="0.14"/>
+    <rect x="894" y="616" width="46" height="6" rx="3" fill="#E879F9" fill-opacity="0.55"/>
+    <rect x="894" y="630" width="66" height="5" rx="2.5" fill="#E2E8F0" fill-opacity="0.14"/>
+  </g>
+
+  <!-- Teléfono frontal -->
+  <g transform="rotate(6 545 420)">
+    <rect x="356" y="160" width="300" height="600" rx="48" fill="#0B0D18" stroke="url(#accent)" stroke-opacity="0.55" stroke-width="1.5"/>
+    <rect x="370" y="174" width="272" height="572" rx="38" fill="#0E1022"/>
+    <rect x="470" y="186" width="72" height="14" rx="7" fill="#05060B"/>
+    <rect x="394" y="224" width="104" height="9" rx="4.5" fill="#E2E8F0" fill-opacity="0.5"/>
+    <rect x="394" y="246" width="152" height="6" rx="3" fill="#E2E8F0" fill-opacity="0.16"/>
+    <rect x="394" y="276" width="224" height="128" rx="26" fill="url(#glass)" stroke="#A5B4FC" stroke-opacity="0.2"/>
+    <rect x="418" y="302" width="86" height="7" rx="3.5" fill="#22D3EE" fill-opacity="0.75"/>
+    <rect x="418" y="320" width="150" height="5" rx="2.5" fill="#E2E8F0" fill-opacity="0.16"/>
+    <rect x="418" y="336" width="120" height="5" rx="2.5" fill="#E2E8F0" fill-opacity="0.12"/>
+    <rect x="418" y="364" width="64" height="18" rx="9" fill="#6366F1" fill-opacity="0.4"/>
+    <rect x="394" y="428" width="224" height="1" fill="#E2E8F0" fill-opacity="0.08"/>
+    <circle cx="418" cy="470" r="20" fill="#14162A" stroke="#A5B4FC" stroke-opacity="0.3"/>
+    <rect x="450" y="456" width="110" height="7" rx="3.5" fill="#E2E8F0" fill-opacity="0.42"/>
+    <rect x="450" y="472" width="74" height="5" rx="2.5" fill="#E2E8F0" fill-opacity="0.14"/>
+    <circle cx="418" cy="536" r="20" fill="#14162A" stroke="#22D3EE" stroke-opacity="0.35"/>
+    <rect x="450" y="522" width="96" height="7" rx="3.5" fill="#E2E8F0" fill-opacity="0.42"/>
+    <rect x="450" y="538" width="64" height="5" rx="2.5" fill="#E2E8F0" fill-opacity="0.14"/>
+    <circle cx="418" cy="602" r="20" fill="#14162A" stroke="#A855F7" stroke-opacity="0.35"/>
+    <rect x="450" y="588" width="120" height="7" rx="3.5" fill="#E2E8F0" fill-opacity="0.42"/>
+    <rect x="450" y="604" width="82" height="5" rx="2.5" fill="#E2E8F0" fill-opacity="0.14"/>
+    <rect x="394" y="664" width="224" height="44" rx="22" fill="#6366F1" fill-opacity="0.55"/>
+    <rect x="474" y="681" width="64" height="9" rx="4.5" fill="#E2E8F0" fill-opacity="0.8"/>
+  </g>
+
+  <!-- Etiquetas flotantes -->
+  <rect x="96" y="292" width="196" height="56" rx="16" fill="#0B0D18" stroke="#A5B4FC" stroke-opacity="0.24"/>
+  <circle cx="126" cy="320" r="6" fill="#22D3EE"/>
+  <rect x="144" y="308" width="108" height="7" rx="3.5" fill="#E2E8F0" fill-opacity="0.45"/>
+  <rect x="144" y="324" width="72" height="5" rx="2.5" fill="#E2E8F0" fill-opacity="0.18"/>
+
+  <rect x="916" y="120" width="174" height="104" rx="18" fill="#0B0D18" stroke="#A5B4FC" stroke-opacity="0.22"/>
+  <rect x="940" y="144" width="64" height="6" rx="3" fill="#A5B4FC" fill-opacity="0.7"/>
+  <rect x="940" y="162" width="118" height="5" rx="2.5" fill="#E2E8F0" fill-opacity="0.16"/>
+  <rect x="940" y="178" width="88" height="5" rx="2.5" fill="#E2E8F0" fill-opacity="0.12"/>
+  <rect x="940" y="196" width="48" height="16" rx="8" fill="#22D3EE" fill-opacity="0.35"/>
+
+  <circle cx="214" cy="640" r="4" fill="#22D3EE" fill-opacity="0.6"/>
+  <circle cx="1010" cy="702" r="3" fill="#A5B4FC" fill-opacity="0.5"/>
+  <circle cx="292" cy="132" r="2.5" fill="#E2E8F0" fill-opacity="0.4"/>
+</svg>
