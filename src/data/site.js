@@ -1,3 +1,36 @@
+/**
+ * @typedef {Object} Social
+ * @property {string} label  Texto accesible y clave de React.
+ * @property {string} href   URL completa; se abre en pestaña nueva.
+ * @property {'Github'|'Linkedin'|'Dribbble'} icon
+ */
+
+/**
+ * @typedef {Object} NavItem
+ * @property {string} id     Debe coincidir con el id de una <section>.
+ * @property {string} label
+ */
+
+/**
+ * Identidad, contacto y navegación del sitio.
+ *
+ * Es la única fuente de verdad para estos datos: la consumen la navbar, el
+ * hero, el contacto y el footer. Cambiar un valor aquí se refleja en toda la
+ * página.
+ *
+ * @type {{
+ *   name: string,
+ *   shortName: string,
+ *   role: string,
+ *   location: string,
+ *   email: string,
+ *   availability: string,
+ *   responseTime: string,
+ *   currentProject: string,
+ *   socials: Social[],
+ *   nav: NavItem[],
+ * }}
+ */
 export const site = {
   name: 'Renato Francisco Ramos Rojas',
   shortName: 'RR',

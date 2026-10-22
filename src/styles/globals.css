@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* La documentación menciona clases de Tailwind en ejemplos: no debe generar CSS. */
+@source not "../../docs";
+
 /* -------------------------------------------------------------------------- */
 /*  Design tokens (Tailwind CSS v4 CSS-first configuration)                   */
 /* -------------------------------------------------------------------------- */

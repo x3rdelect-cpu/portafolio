@@ -1,4 +1,4 @@
-# Portafolio — Boilerplate React + Tailwind + Framer Motion
+# Portafolio personal — React + Tailwind + Framer Motion
 
 Portafolio personal de una sola página con estética dark, motion intencional y
 componentes interactivos listos para reutilizar. Construido con React 19, Vite,
@@ -7,6 +7,20 @@ Tailwind CSS v4, Framer Motion y Lucide.
 > Los datos de contacto ya están personalizados. Los enlaces de redes y de
 > proyectos son opcionales: edítalos en `src/data/site.js` y
 > `src/data/projects.js` cuando los tengas.
+
+---
+
+## Documentación
+
+La documentación técnica completa está en [`docs/`](./docs/README.md):
+
+| Documento | Contenido |
+| --- | --- |
+| [docs/arquitectura.md](./docs/arquitectura.md) | Stack, árbol de render, capas, flujo de datos, estilos y build |
+| [docs/componentes.md](./docs/componentes.md) | Catálogo de componentes con props, comportamiento y ejemplos |
+| [docs/datos.md](./docs/datos.md) | Esquemas de `site`, `projects`, `experience` y `skills` |
+| [docs/desarrollo.md](./docs/desarrollo.md) | Entorno, scripts, convenciones, recetas, despliegue y troubleshooting |
+| [docs/accesibilidad-y-rendimiento.md](./docs/accesibilidad-y-rendimiento.md) | Accesibilidad, teclado, movimiento reducido y performance |
 
 ---
 
@@ -88,7 +102,8 @@ Tailwind v4 se configura desde CSS (no necesita `tailwind.config.js`):
 ```text
 src/
 ├── assets/
-│   └── projects/              # Covers SVG de los proyectos
+│   ├── projects/              # Covers SVG de los proyectos
+│   └── components/            # Legado Bootstrap (no se importa)
 ├── components/
 │   ├── ui/                    # Primitivos de interfaz
 │   │   ├── Badge.jsx
@@ -129,6 +144,14 @@ src/
 │   └── globals.css
 ├── App.jsx
 └── main.jsx
+```
+
+Otros directorios relevantes:
+
+```text
+docs/                          # Documentación técnica (este índice)
+public/                        # favicon.svg y assets estáticos
+dist/                          # Build de producción (generado)
 ```
 
 ### Responsabilidad de cada capa
