@@ -60,6 +60,9 @@ componen en `src/App.jsx`. Cada una declara el `id` que usa la navegación.
 - El formulario envía `nombre`, `email` y `mensaje` mediante EmailJS; requiere
   `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID` y
   `VITE_EMAILJS_PUBLIC_KEY`.
+- También envía alias habituales de plantilla (`from_name`, `reply_to`,
+  `message`, entre otros). Los destinatarios y los campos `To Email`/`Reply-To`
+  se configuran en el dashboard de EmailJS.
 - `handleCopyEmail` usa `navigator.clipboard`; si falla, abre el enlace `mailto:`.
   El estado `copied` se revierte a los 2.2 s y se anuncia con `aria-live`.
 - `InfoRow` (interno) presenta email, ubicación y tiempo de respuesta; acepta

@@ -157,8 +157,8 @@ Las portadas actuales se importan en `src/data/projects.js`.
 
 ### Configurar el formulario de contacto
 
-El formulario de `Contact.jsx` envía los campos `nombre`, `email` y `mensaje`
-mediante EmailJS. Configura estas variables en `.env.local`:
+El formulario de `Contact.jsx` envía los datos del visitante mediante EmailJS.
+Copia `.env.example` a `.env.local` y completa los valores desde tu cuenta:
 
 ```env
 VITE_EMAILJS_SERVICE_ID=tu_service_id
@@ -170,6 +170,21 @@ Reinicia Vite después de cambiar las variables. Las variables `VITE_*` forman
 parte del código del navegador; usa únicamente la clave pública de EmailJS y
 configura las restricciones de dominio desde EmailJS. Si falta alguna variable,
 el formulario informa que no está disponible y mantiene el enlace `mailto:`.
+
+En el dashboard de EmailJS:
+
+1. Conecta y prueba un servicio de correo en **Email Services**.
+2. Crea una plantilla y define el destinatario en **To Email**.
+3. En el contenido de la plantilla usa `{{nombre}}` (o `{{from_name}}`),
+   `{{email}}` (o `{{reply_to}}`) y `{{mensaje}}` (o `{{message}}`).
+4. Configura **Reply-To** como `{{reply_to}}` para poder responder al remitente.
+5. Autoriza el dominio del sitio en la configuración de seguridad de EmailJS.
+
+El formulario también proporciona los alias `name`, `user_name`, `from_email`,
+`user_email` y `user_message` para admitir plantillas que usen esos nombres.
+Los tres IDs/keys deben pertenecer a la misma cuenta y servicio de EmailJS.
+En producción, añade las mismas tres variables en la configuración del hosting
+y vuelve a desplegar; el archivo `.env.local` solo configura el entorno local.
 
 ## 5. Despliegue
 

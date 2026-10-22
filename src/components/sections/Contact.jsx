@@ -34,6 +34,26 @@ async function showContactAlert(options) {
   return Swal.fire(options)
 }
 
+function getEmailErrorMessage(error) {
+  switch (error?.status) {
+    case 400: {
+      const details = error.text?.trim()
+      return details
+        ? `EmailJS rechazó la solicitud: ${details}`
+        : 'EmailJS rechazó la solicitud. Verifica el servicio y la plantilla configurados.'
+    }
+    case 401:
+    case 403:
+      return 'EmailJS rechazó la clave pública o el dominio de este sitio.'
+    case 404:
+      return 'No se encontró el servicio o la plantilla configurados en EmailJS.'
+    case 429:
+      return 'Se alcanzó el límite de envíos de EmailJS. Inténtalo más tarde.'
+    default:
+      return 'Revisa tu conexión y la configuración del servicio de EmailJS. También puedes escribirme directamente por email.'
+  }
+}
+
 function InfoRow({ icon: Icon, label, value, href }) {
   const content = (
     <>
@@ -113,6 +133,7 @@ export default function Contact() {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
+    if (isSending) return
 
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
@@ -140,8 +161,16 @@ export default function Contact() {
         templateId,
         {
           nombre: form.nombre,
+          name: form.nombre,
+          from_name: form.nombre,
+          user_name: form.nombre,
           email: form.email,
+          from_email: form.email,
+          user_email: form.email,
+          reply_to: form.email,
           mensaje: form.mensaje,
+          message: form.mensaje,
+          user_message: form.mensaje,
         },
         publicKey,
       )
@@ -156,10 +185,13 @@ export default function Contact() {
       })
       setForm({ nombre: '', email: '', mensaje: '' })
     } catch (error) {
-      console.error('Error al enviar el mensaje:', error)
+      console.error('Error al enviar el mensaje:', {
+        status: error?.status,
+        message: error?.text ?? error?.message,
+      })
       await showContactAlert({
         title: 'No se pudo enviar',
-        text: 'Hubo un problema al enviar el mensaje. Inténtalo de nuevo o escríbeme directamente por email.',
+        text: getEmailErrorMessage(error),
         icon: 'error',
         confirmButtonColor: '#6366f1',
         background: '#0d101b',
